@@ -15,7 +15,7 @@ The repository is structured as follows:
 - **Scripts/Notebooks:** Contains the Python scripts used for data extraction, cleaning and transformation.
 
 ## Data Flow
-- **Extract:** : The raw COVID-19 dataset is automatically extracted from the link https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv using Amazon EventBridge. The extracted data is then staged in an S3 bucket.
+- **Extract:** : The raw COVID-19 dataset is automatically extracted from the link https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv via AWS Lambda scheduled by Amazon EventBridge. The extracted data is then staged in an S3 bucket.
 - **Transform:** Jupyter Notebook on AWS Glue is used to transform the data by following the steps below:
   - Create 5 dimension tables and a fact table.
   - Handle null/missing values and remove duplicate records from the dimension and fact tables.
