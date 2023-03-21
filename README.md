@@ -25,7 +25,7 @@ The repository is structured as follows:
 
 Steps
 1. **Extraction**
-- Write a Python script in AWS Lambda to extract COVID-19 data from 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv' in an S3 bucket. Use Amazon EventBridge to invoke the lambda function on a daily basis (here, we invoke the function at 11:00 AM IST).
+- Write a Python script in AWS Lambda to extract COVID-19 data from 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv' in an S3 bucket. Use Amazon EventBridge to invoke the lambda function on a daily basis.
 
 2. **Transformation**
 - Using Pyspark in Jupyter Notebook on AWS Glue, transform the extracted data. The steps involved in the transformation are:
